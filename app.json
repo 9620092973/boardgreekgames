@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "DoubleCritical",
+    "slug": "DoubleCritical",
+    "privacy": "public",
+    "facebookAppId": "483471218906843",
+    "facebookDisplayName": "DoubleCritical Dev",
+    "facebookScheme": "fb483471218906843",
+    "scheme": "myapp",
+    "sdkVersion": "35.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.4.8",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "svg", "ts", "tsx"]
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "assets/Image/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "usesIcloudStorage": true,
+      "bundleIdentifier": "com.s7works.doublecritical1",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.s7works.doublecritical1"
+    },       
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "s7works-7d",
+            "project": "double-critical",
+            "authToken": "1eaf98ff306d462087b707e6d8f984eb0c3000aab2fc4d58808c5da645421c27"
+          }
+        }
+      ]
+    }
+  }
+}
+              
